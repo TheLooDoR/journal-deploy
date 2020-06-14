@@ -41,6 +41,7 @@ app.use(cors({
     origin: CLIENT_ORIGIN
 }))
 
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use('/api/users', userRoutes);
 app.use('/api/groups', groupRoutes)
@@ -56,6 +57,9 @@ app.use('/api/positions', positionRoutes)
 app.use('/api/students', studentRoutes)
 app.use('/api/statistics', statisticRoutes)
 app.use('/api/week-days', weekDayRoutes)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+})
 
 app.listen(PORT, () => {
     console.log(`Server is running on PORT ${PORT}`);
