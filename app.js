@@ -41,6 +41,7 @@ app.use(cors({
     origin: CLIENT_ORIGIN
 }))
 
+const path = require('path');
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use('/api/users', userRoutes);
