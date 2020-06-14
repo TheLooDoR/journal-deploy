@@ -1,0 +1,137 @@
+.form-container {
+    border-radius: 20px;
+    color: white;
+    background: url('./assets/report.png') no-repeat 80px 20px, linear-gradient(89.73deg, #2B9CFF 0.14%, #9610FF 99.83%);
+    max-width: 600px;
+    width: 100%;
+    margin: 155px auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 60px;
+}
+
+.form-header {
+    font-weight: 500;
+    font-size: 35px;
+    margin-bottom: 24px;
+    align-self: center;
+}
+
+.register-form {
+    display: flex;
+    flex-flow: column;
+    max-width: 450px;
+    width: 100%;
+    align-self: center;
+}
+
+.form-group {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 450px;
+}
+
+.form-input {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    margin-left: 15px;
+    padding: 0;
+    display: block;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.invalid {
+    border-color: #dc3545 !important;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url("./assets/cancel.png");
+    background-repeat: no-repeat;
+    background-position: center right calc(.375em + .1875rem);
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.feedback {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+    &__confirm {
+        text-decoration: underline;
+        &:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+.submit-btn {
+    box-sizing: border-box;
+    height: 55px;
+    margin-top: 36px;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 0;
+    border: none;
+    background: #40FFFF;
+    border-radius: 10px;
+    color: #6352FF;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 22px;
+    align-self: center;
+    &:hover:not(:disabled) {
+        background: #3de3e3;
+        transition: background-color .3s;
+    }
+    &:disabled {
+        opacity: 0.65;
+        cursor: not-allowed;
+    }
+}
+
+.register-select {
+    width: 100%;
+    height: 38px;
+    color: initial;
+    .react-select {
+        &__control {
+            border: 1px solid #ccc !important;
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .form-container {
+        padding: 30px;
+    }
+    .form-header {
+        font-size: 30px;
+    }
+    .form-group label {
+        font-size: 14px;
+    }
+    .form-input {
+        font-size: 12px;
+    }
+    .submit-btn {
+        font-size: 16px;
+    }
+}
+

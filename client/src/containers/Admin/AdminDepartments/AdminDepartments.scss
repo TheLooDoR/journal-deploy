@@ -1,0 +1,81 @@
+.AdminDepartments {
+  padding: 10px;
+  color: #1D3B55;
+  &__departments-table {
+    height: 350px;
+  }
+  .admin-table__body {
+    tr {
+      &:nth-child(odd) {
+        background: rgba(43, 156, 255, .1);
+      }
+      &:nth-child(even) {
+        background: rgba(150, 16, 255, .1);
+      }
+    }
+  }
+  &__filter {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__search {
+    width: 472px;
+  }
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-flow: column;
+    margin-top: 10px;
+    align-items: center;
+  }
+  &__filter-btn {
+    padding: 10px 0;
+    font-size: 13px;
+    width: 124px;
+  }
+  &__add-department-btn {
+    background: transparent;
+    border: 1px solid #2B9CFF;
+    color: #2B9CFF;
+    padding: 10px 0;
+    width: 200px;
+    font-size: 13px;
+  }
+  &__not-found {
+    font-size: 24px;
+  }
+  @media (min-width: 480px) {
+    &__filter {
+      justify-content: normal;
+    }
+    &__buttons {
+      flex-flow: row;
+    }
+    &__filter-btn {
+      margin-left: 14px;
+    }
+    &__add-department-btn {
+      margin-left: 60px;
+    }
+  }
+  @media (min-width: 768px) {
+    &__departments-table {
+      width: 60vw;
+    }
+  }
+  @media (min-width: 965px) {
+    &__buttons {
+      margin-top: 0;
+    }
+  }
+}
+
+#delete-department-modal {
+  .styles_closeButton__20ID4 {
+    display: none;
+  }
+}

@@ -1,0 +1,34 @@
+.Users {
+  padding: 10px;
+  color: #1D3B55;
+  &__table {
+    height: 85vh;
+    width: 100%;
+  }
+  &__search {
+    width: 500px;
+  }
+  &__users-table {
+    tr {
+      &:nth-child(odd) {
+        background: rgba(43, 156, 255, .1);
+      }
+      &:nth-child(even) {
+        background: rgba(150, 16, 255, .1);
+      }
+    }
+  }
+  &__not-found {
+    font-size: 24px;
+  }
+}
+
+#users-update-modal {
+  padding: 60px 0;
+}
+
+#users-delete-modal {
+  .styles_closeButton__20ID4 {
+    display: none;
+  }
+}
