@@ -4,11 +4,18 @@ import rootReducer from './reducers';
 
 const inititalState = {};
 
-const store = createStore(
+let store
+process.env.NODE_ENV === 'development' ?
+ store = createStore(
     rootReducer,
     inititalState,
     compose(applyMiddleware(thunk),
-        window.__REDUX_DEVTOOLS_EXTENSION__&& window.__REDUX_DEVTOOLS_EXTENSION__()));
+        window.__REDUX_DEVTOOLS_EXTENSION__&& window.__REDUX_DEVTOOLS_EXTENSION__()))
+    :
+    store = createStore(
+    rootReducer,
+    inititalState,
+    compose(applyMiddleware(thunk)));
 
 // const store = createStore(
 //     rootReducer,
