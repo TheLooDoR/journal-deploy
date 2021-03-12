@@ -57,7 +57,7 @@
     "react-burger-menu": "^2.6.13",
     "react-calendar": "^3.0.0",
     "react-chartjs-2": "^2.9.0",
-    "react-dev-utils": "^9.1.0",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.11.0",
     "react-html-table-to-excel": "^2.0.0",
     "react-input-mask": "^2.0.4",
